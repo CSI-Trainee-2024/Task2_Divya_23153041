@@ -10,7 +10,7 @@ body {
     flex-direction: column;
     gap: 40px;
 }
-.upper{
+.upper {
     background-color: #ffca28;
     padding: 10px;
     border-radius: 10px;
@@ -25,7 +25,7 @@ body {
     position: absolute;
     top: 30px;
 }
-.upper button{
+.upper button {
     background-color:#8ee3e6;
     border: none;
     color: black;
@@ -48,13 +48,14 @@ body {
     position: absolute;
     top: 150px;
 }
-.line{
+.line {
     width: 97%;
     height: 4px;
     background-color: black;
     position: absolute;
     bottom: 15px;
 }
+
 #hours, #minutes, #seconds {
     width: 2%;
     padding: 10px;
@@ -66,10 +67,11 @@ body {
     text-align: center;
     font-weight: bold;
 }
+
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+    -webkit-appearance: none;
+    margin: 0;
 }
 h1 {
     font-size: 24px;
@@ -89,7 +91,6 @@ input {
 input[type="text"], input[type="number"] {
     background-color: #cff6f8;
 }
-
 button {
     background-color: #ffca28;
     border: none;
@@ -111,7 +112,6 @@ li.completed {
     padding: 0;
     margin-top: 10px;
 }
-
 #exerciseli li {
     background-color: #8ee3e6;
     margin: 10px 0;
@@ -144,4 +144,58 @@ li.completed {
 }
 #summary tr:nth-child(even) {
     background-color: #f2f2f2;
+}
+@media (max-width: 768px) {
+    body {
+        height: auto;
+        min-height: 100vh;
+    }
+    .upper, .container {
+        position: static;
+        width: 90%;
+        margin: 20px auto;
+    }
+    .upper {
+        flex-direction: column;
+    }
+    #hours, #minutes, #seconds {
+        width: 40px;
+    }
+    input {
+        width: 80%;
+    }
+    #exerciseli li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    #exerciseli li button {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+    #summary {
+        overflow-x: auto;
+    }
+    .line{
+        display: none;
+    }
+}
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+    h1 {
+        font-size: 20px;
+    }
+    #totalTime {
+        font-size: 20px;
+    }
+    .upper, .container {
+        padding: 10px;
+    }
+    button {
+        padding: 8px 12px;
+    }
+    .line{
+        display: none;
+    }
 }
