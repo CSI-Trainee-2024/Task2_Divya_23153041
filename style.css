@@ -55,7 +55,21 @@ body {
     position: absolute;
     bottom: 15px;
 }
-
+#exerciseName{
+    font-size: 14px;
+    color: black;
+    width: 15%;
+    margin-bottom: 10px;
+}
+#reps{
+    font-size: 14px;
+    color: black;
+    width: 15%;
+    margin-bottom: 10px;
+}
+.end-workout{
+    width: 99%;
+}
 #hours, #minutes, #seconds {
     width: 2%;
     padding: 10px;
